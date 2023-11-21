@@ -5,7 +5,7 @@
     "description": "Make Short URL",
     "action": {
       "default_popup" : "src/popup.html",
-      "default_icon" : "image/close-window.png"
+      "default_icon" : "image/icon.png"
     },
     "icons" : {
       "16" : "image/icon-16.png",
