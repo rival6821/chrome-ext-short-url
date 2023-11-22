@@ -1,3 +1,36 @@
 body {
-    width: 20rem;
+    /* width: 20rem; */
+    width: 300px;
+}
+
+#title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#create_btn {
+    /* width: 50px; */
+    margin-bottom: 1rem;
+    font-size: 20px;
+    color: blueviolet;
+}
+
+#create_btn:hover {
+    cursor: pointer;
+}
+
+#url {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 1rem;
+}
+
+#copy_btn {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    color: blueviolet;
 }

@@ -4,7 +4,7 @@ const create = async () => {
         currentWindow: true,
     }).then((tabs) => tabs[0].url);
 
-    if (!nowUrl.includes('http://') || !nowUrl.includes('https://')) {
+    if (!nowUrl.startsWith('http://') && !nowUrl.startsWith('https://')) {
         alert('http:// 또는 https://로 시작하는 주소만 가능합니다.');
         return;
     }
