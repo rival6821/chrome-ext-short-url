@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Make Short URL",
+    "name": "Create Short URL",
     "version": "1.0",
-    "description": "Make Short URL",
+    "description": "Create Short URL",
     "action": {
       "default_popup" : "src/popup.html",
       "default_icon" : "image/icon.png"
@@ -17,6 +17,7 @@
     },
     "permissions": [
       "tabs",
-      "activeTab"
+      "activeTab",
+      "clipboardWrite"
     ]
   }

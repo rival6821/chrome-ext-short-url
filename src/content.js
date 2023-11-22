@@ -23,3 +23,26 @@ const create = async () => {
 };
 
 document.getElementById('create_btn').addEventListener('click', create);
+
+document.getElementById('copy_btn').addEventListener('click', () => {
+    const url = document.getElementById('url').innerText;
+    copyClipBoard(url);
+});
+
+export const copyClipBoard = async (text) => {
+    try {  
+        if (navigator.clipboard) {
+            await navigator.clipboard.writeText(text);
+        } else {
+            let t = document.createElement("textarea");
+            document.body.appendChild(t);
+            t.value = text;
+            t.select();
+            document.execCommand("Copy");
+            document.body.removeChild(t);
+        }
+        return true
+    } catch (error) {
+        return false 
+    }
+}
