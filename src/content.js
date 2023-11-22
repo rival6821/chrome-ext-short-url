@@ -1,11 +1,14 @@
-const template = document.getElementById('li_template');
-
 const create = async () => {
-    // 현재 열린 탭의 url을 가져온다.
     const nowUrl = await chrome.tabs.query({
         active: true,
         currentWindow: true,
     }).then((tabs) => tabs[0].url);
+
+    if (!nowUrl.includes('http://') || !nowUrl.includes('https://')) {
+        alert('http:// 또는 https://로 시작하는 주소만 가능합니다.');
+        return;
+    }
+
     const result = await fetch("https://url.ilhoon.kr", {
         method: "POST",
         headers: {
@@ -15,10 +18,12 @@ const create = async () => {
             url: nowUrl,
         }),
     }).then((res) => res.json());
+
     if (result.error) {
         alert(result.error);
         return;
     }
+
     document.getElementById('url').innerText = `https://url.ilhoon.kr/${result.url}`;
 };
 
