@@ -1,4 +1,12 @@
+const urlElement = document.getElementById('url');
+
+let isMakeUrl = false;
+
 const create = async () => {
+    if (isMakeUrl) {
+        alert('이미 URL이 생성되었습니다.');
+        return;
+    }
     const nowUrl = await chrome.tabs.query({
         active: true,
         currentWindow: true,
@@ -24,13 +32,16 @@ const create = async () => {
         return;
     }
 
-    document.getElementById('url').innerText = `https://url.ilhoon.kr/${result.url}`;
+    isMakeUrl = true;
+
+    urlElement.style.display = 'block';
+    urlElement.innerText = `https://url.ilhoon.kr/${result.url}`;
 };
 
 document.getElementById('create_btn').addEventListener('click', create);
 
 document.getElementById('copy_btn').addEventListener('click', () => {
-    const url = document.getElementById('url').innerText;
+    const url = urlElement.innerText;
     copyClipBoard(url);
 });
 
