@@ -1,3 +1,5 @@
+const homeUrl = "https://l.muz.kr";
+
 const create = async () => {
     const nowUrl = await chrome.tabs.query({
         active: true,
@@ -9,7 +11,7 @@ const create = async () => {
         return;
     }
 
-    const result = await fetch("https://url.ilhoon.kr", {
+    const result = await fetch(homeUrl, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -24,7 +26,7 @@ const create = async () => {
         return;
     }
 
-    document.getElementById('url').innerText = `https://url.ilhoon.kr/${result.url}`;
+    document.getElementById('url').innerText = `${homeUrl}/${result.url}`;
 };
 
 document.getElementById('create_btn').addEventListener('click', create);

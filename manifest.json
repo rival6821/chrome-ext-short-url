@@ -1,14 +1,15 @@
 {
     "manifest_version": 3,
     "name": "Create Short URL",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Create Short URL",
     "action": {
       "default_popup" : "src/popup.html",
       "default_icon" : "image/icon.png"
     },
     "host_permissions" : [
-      "https://url.ilhoon.kr/*"
+      "https://url.ilhoon.kr/*",
+      "https://l.muz.kr/*"
     ],
     "icons" : {
       "16" : "image/icon-16.png",
