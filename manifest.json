@@ -8,7 +8,6 @@
       "default_icon" : "image/icon.png"
     },
     "host_permissions" : [
-      "https://url.ilhoon.kr/*",
       "https://l.muz.kr/*"
     ],
     "icons" : {
@@ -18,7 +17,6 @@
     },
     "permissions": [
       "tabs",
-      "activeTab",
       "clipboardWrite"
     ]
   }
