@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Create Short URL",
-    "version": "1.1",
+    "version": "1.2",
     "description": "Create Short URL",
     "action": {
       "default_popup" : "src/popup.html",
