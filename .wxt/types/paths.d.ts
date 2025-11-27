@@ -4,6 +4,8 @@ import "wxt/browser";
 declare module "wxt/browser" {
   export type PublicPath =
     | "/"
+    | "/_locales/en/messages.json"
+    | "/_locales/ko/messages.json"
     | "/image/icon-128.png"
     | "/image/icon-16.png"
     | "/image/icon-24.png"

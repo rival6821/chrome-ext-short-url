@@ -1,6 +1,21 @@
 const homeUrl = "https://l.muz.kr";
 const urlElement = document.getElementById('url');
 
+// Localization function
+const localizeHtml = () => {
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const message = chrome.i18n.getMessage(key);
+        if (message) {
+            element.innerText = message;
+        }
+    });
+};
+
+// Run localization
+localizeHtml();
+
 let isMakeUrl = false;
 
 const showToast = (message) => {
@@ -22,7 +37,7 @@ const createAndCopy = async () => {
         }).then((tabs) => tabs[0].url);
     
         if (!nowUrl.startsWith('http://') && !nowUrl.startsWith('https://')) {
-            showToast('Only URLs starting with http:// or https:// are supported.');
+            showToast(chrome.i18n.getMessage('errorInvalidUrl'));
             return;
         }
     
@@ -49,7 +64,7 @@ const createAndCopy = async () => {
     }
 
     await copyClipBoard(finalUrl);
-    showToast('URL copied to clipboard.');
+    showToast(chrome.i18n.getMessage('toastUrlCopied'));
 };
 
 document.getElementById('action_btn').addEventListener('click', createAndCopy);

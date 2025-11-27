@@ -3,13 +3,18 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style-fonts.css" />
         <link rel="stylesheet" href="./style.css" />
         <title>Create Short URL</title>
     </head>
     <body>
-        <div id="title">Create Short <b>URL</b></div>
+        <div id="title" data-i18n="popupTitle">Create Short <b>URL</b></div>
         <div id="url"></div>
-        <button id="action_btn">Shorten & Copy</button>
+        <button id="action_btn" data-i18n="btnShortenCopy">Shorten & Copy</button>
         <div id="toast">URL copied to clipboard.</div>
 
         <script type="module" src="./main.js"></script>

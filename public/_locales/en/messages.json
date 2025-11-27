@@ -1,0 +1,26 @@
+{
+  "extName": {
+    "message": "Create Short URL",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Create Short URL",
+    "description": "Extension description"
+  },
+  "popupTitle": {
+    "message": "Create Short URL",
+    "description": "Title in the popup"
+  },
+  "btnShortenCopy": {
+    "message": "Shorten & Copy",
+    "description": "Button text"
+  },
+  "toastUrlCopied": {
+    "message": "URL copied to clipboard.",
+    "description": "Toast message when copied"
+  },
+  "errorInvalidUrl": {
+    "message": "Only URLs starting with http:// or https:// are supported.",
+    "description": "Error message for invalid URL"
+  }
+}

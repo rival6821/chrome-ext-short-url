@@ -22,12 +22,14 @@ button:hover {
 body {
     width: 300px;
     margin: 25px;
+    font-family: 'Paperlogy', 'Nunito', 'Noto Sans KR', sans-serif;
 }
 
 #title {
     text-align: center;
     margin-bottom: 20px;
     font-size: 24px;
+    font-weight: 800;
 }
 
 #url {

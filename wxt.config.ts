@@ -2,8 +2,9 @@ import { defineConfig } from 'wxt';
 
 export default defineConfig({
   manifest: {
-    name: "Create Short URL",
-    description: "Create Short URL",
+    default_locale: "ko",
+    name: "__MSG_extName__",
+    description: "__MSG_extDescription__",
     version: "1.3",
     permissions: ["tabs", "clipboardWrite"],
     host_permissions: ["https://l.muz.kr/*"],

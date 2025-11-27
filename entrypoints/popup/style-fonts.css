@@ -1,0 +1,19 @@
+/* Paperlogy font (self-hosted via jsDelivr) */
+@font-face {
+    font-family: 'Paperlogy';
+    font-display: swap;
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-4Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Paperlogy';
+    font-display: swap;
+    font-weight: 600;
+    src: url('https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-6SemiBold.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Paperlogy';
+    font-display: swap;
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-7Bold.woff2') format('woff2');
+}

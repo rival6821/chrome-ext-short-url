@@ -72,8 +72,68 @@ declare module "wxt/browser" {
       substitutions?: string | string[],
       options?: GetMessageOptions,
     ): string;
+    /**
+     * 확장 프로그램 이름
+     *
+     * "단축 URL 생성"
+     */
     getMessage(
-      messageName: "@@extension_id" | "@@ui_locale" | "@@bidi_dir" | "@@bidi_reversed_dir" | "@@bidi_start_edge" | "@@bidi_end_edge",
+      messageName: "extName",
+      substitutions?: string | string[],
+      options?: GetMessageOptions,
+    ): string;
+    /**
+     * 확장 프로그램 설명
+     *
+     * "현재 페이지의 단축 URL을 생성합니다."
+     */
+    getMessage(
+      messageName: "extDescription",
+      substitutions?: string | string[],
+      options?: GetMessageOptions,
+    ): string;
+    /**
+     * 팝업 제목
+     *
+     * "단축 URL 생성"
+     */
+    getMessage(
+      messageName: "popupTitle",
+      substitutions?: string | string[],
+      options?: GetMessageOptions,
+    ): string;
+    /**
+     * 버튼 텍스트
+     *
+     * "단축 및 복사"
+     */
+    getMessage(
+      messageName: "btnShortenCopy",
+      substitutions?: string | string[],
+      options?: GetMessageOptions,
+    ): string;
+    /**
+     * 복사 완료 토스트 메시지
+     *
+     * "URL이 클립보드에 복사되었습니다."
+     */
+    getMessage(
+      messageName: "toastUrlCopied",
+      substitutions?: string | string[],
+      options?: GetMessageOptions,
+    ): string;
+    /**
+     * 잘못된 URL 에러 메시지
+     *
+     * "http:// 또는 https://로 시작하는 URL만 지원됩니다."
+     */
+    getMessage(
+      messageName: "errorInvalidUrl",
+      substitutions?: string | string[],
+      options?: GetMessageOptions,
+    ): string;
+    getMessage(
+      messageName: "@@extension_id" | "@@ui_locale" | "@@bidi_dir" | "@@bidi_reversed_dir" | "@@bidi_start_edge" | "@@bidi_end_edge" | "extName" | "extDescription" | "popupTitle" | "btnShortenCopy" | "toastUrlCopied" | "errorInvalidUrl",
       substitutions?: string | string[],
       options?: GetMessageOptions,
     ): string;
