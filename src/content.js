@@ -3,48 +3,56 @@ const urlElement = document.getElementById('url');
 
 let isMakeUrl = false;
 
-const create = async () => {
+const showToast = (message) => {
+    const toast = document.getElementById("toast");
+    toast.innerText = message;
+    toast.className = "show";
+    setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+}
+
+const createAndCopy = async () => {
+    let finalUrl = "";
+
     if (isMakeUrl) {
-        alert('이미 URL이 생성되었습니다.');
-        return;
-    }
-    const nowUrl = await chrome.tabs.query({
-        active: true,
-        currentWindow: true,
-    }).then((tabs) => tabs[0].url);
-
-    if (!nowUrl.startsWith('http://') && !nowUrl.startsWith('https://')) {
-        alert('http:// 또는 https://로 시작하는 주소만 가능합니다.');
-        return;
-    }
-
-    const result = await fetch(homeUrl, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            url: nowUrl,
-        }),
-    }).then((res) => res.json());
-
-    if (result.error) {
-        alert(result.error);
-        return;
-    }
+        finalUrl = urlElement.innerText;
+    } else {
+        const nowUrl = await chrome.tabs.query({
+            active: true,
+            currentWindow: true,
+        }).then((tabs) => tabs[0].url);
     
-    isMakeUrl = true;
+        if (!nowUrl.startsWith('http://') && !nowUrl.startsWith('https://')) {
+            showToast('Only URLs starting with http:// or https:// are supported.');
+            return;
+        }
+    
+        const result = await fetch(homeUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                url: nowUrl,
+            }),
+        }).then((res) => res.json());
+    
+        if (result.error) {
+            showToast(result.error);
+            return;
+        }
+        
+        isMakeUrl = true;
+        finalUrl = `${homeUrl}/${result.url}`;
+    
+        urlElement.style.display = 'block';
+        urlElement.innerText = finalUrl;
+    }
 
-    urlElement.style.display = 'block';
-    urlElement.innerText = `${homeUrl}/${result.url}`;
+    await copyClipBoard(finalUrl);
+    showToast('URL copied to clipboard.');
 };
 
-document.getElementById('create_btn').addEventListener('click', create);
-
-document.getElementById('copy_btn').addEventListener('click', () => {
-    const url = urlElement.innerText;
-    copyClipBoard(url);
-});
+document.getElementById('action_btn').addEventListener('click', createAndCopy);
 
 export const copyClipBoard = async (text) => {
     try {  
