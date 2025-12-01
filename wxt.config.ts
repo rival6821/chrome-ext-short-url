@@ -5,7 +5,7 @@ export default defineConfig({
     default_locale: "en",
     name: "__MSG_extName__",
     description: "__MSG_extDescription__",
-    version: "1.4",
+    version: "1.5",
     permissions: ["tabs", "clipboardWrite"],
     host_permissions: ["https://l.muz.kr/*"],
     icons: {

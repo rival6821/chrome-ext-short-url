@@ -73,9 +73,9 @@ declare module "wxt/browser" {
       options?: GetMessageOptions,
     ): string;
     /**
-     * 확장 프로그램 이름
+     * Extension name
      *
-     * "단축 URL 생성"
+     * "Create Short URL"
      */
     getMessage(
       messageName: "extName",
@@ -83,9 +83,9 @@ declare module "wxt/browser" {
       options?: GetMessageOptions,
     ): string;
     /**
-     * 확장 프로그램 설명
+     * Extension description
      *
-     * "현재 페이지의 단축 URL을 생성합니다."
+     * "Create Short URL"
      */
     getMessage(
       messageName: "extDescription",
@@ -93,9 +93,9 @@ declare module "wxt/browser" {
       options?: GetMessageOptions,
     ): string;
     /**
-     * 팝업 제목
+     * Title in the popup
      *
-     * "단축 URL 생성"
+     * "Create Short URL"
      */
     getMessage(
       messageName: "popupTitle",
@@ -103,9 +103,9 @@ declare module "wxt/browser" {
       options?: GetMessageOptions,
     ): string;
     /**
-     * 버튼 텍스트
+     * Button text
      *
-     * "단축 및 복사"
+     * "Shorten & Copy"
      */
     getMessage(
       messageName: "btnShortenCopy",
@@ -113,9 +113,9 @@ declare module "wxt/browser" {
       options?: GetMessageOptions,
     ): string;
     /**
-     * 복사 완료 토스트 메시지
+     * Toast message when copied
      *
-     * "URL이 클립보드에 복사되었습니다."
+     * "URL copied to clipboard."
      */
     getMessage(
       messageName: "toastUrlCopied",
@@ -123,9 +123,9 @@ declare module "wxt/browser" {
       options?: GetMessageOptions,
     ): string;
     /**
-     * 잘못된 URL 에러 메시지
+     * Error message for invalid URL
      *
-     * "http:// 또는 https://로 시작하는 URL만 지원됩니다."
+     * "Only URLs starting with http:// or https:// are supported."
      */
     getMessage(
       messageName: "errorInvalidUrl",

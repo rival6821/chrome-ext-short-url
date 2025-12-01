@@ -6,3 +6,4 @@ chrome-ext-short-url/
 node_modules/
 
 .output/
+.wxt/
