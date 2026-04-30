@@ -1,0 +1,26 @@
+{
+  "extName": {
+    "message": "शॉर्ट URL बनाएं",
+    "description": "एक्सटेंशन का नाम"
+  },
+  "extDescription": {
+    "message": "वर्तमान पेज के लिए एक शॉर्ट URL बनाता है।",
+    "description": "एक्सटेंशन का विवरण"
+  },
+  "popupTitle": {
+    "message": "शॉर्ट URL बनाएं",
+    "description": "पॉपअप शीर्षक"
+  },
+  "btnShortenCopy": {
+    "message": "छोटा करें और कॉपी करें",
+    "description": "बटन टेक्स्ट"
+  },
+  "toastUrlCopied": {
+    "message": "URL क्लिपबोर्ड पर कॉपी हो गया।",
+    "description": "कॉपी होने पर दिखने वाला टोस्ट संदेश"
+  },
+  "errorInvalidUrl": {
+    "message": "केवल http:// या https:// से शुरू होने वाले URL समर्थित हैं।",
+    "description": "अमान्य URL के लिए त्रुटि संदेश"
+  }
+}

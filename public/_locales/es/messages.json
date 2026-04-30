@@ -1,0 +1,26 @@
+{
+  "extName": {
+    "message": "Crear URL corta",
+    "description": "Nombre de la extensión"
+  },
+  "extDescription": {
+    "message": "Crea una URL corta para la página actual.",
+    "description": "Descripción de la extensión"
+  },
+  "popupTitle": {
+    "message": "Crear URL corta",
+    "description": "Título de la ventana emergente"
+  },
+  "btnShortenCopy": {
+    "message": "Acortar y copiar",
+    "description": "Texto del botón"
+  },
+  "toastUrlCopied": {
+    "message": "La URL se copió al portapapeles.",
+    "description": "Mensaje emergente al copiar"
+  },
+  "errorInvalidUrl": {
+    "message": "Solo se admiten URL que comiencen con http:// o https://.",
+    "description": "Mensaje de error para URL no válidas"
+  }
+}

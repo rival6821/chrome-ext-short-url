@@ -1,0 +1,26 @@
+{
+  "extName": {
+    "message": "إنشاء رابط مختصر",
+    "description": "اسم الإضافة"
+  },
+  "extDescription": {
+    "message": "ينشئ رابطًا مختصرًا للصفحة الحالية.",
+    "description": "وصف الإضافة"
+  },
+  "popupTitle": {
+    "message": "إنشاء رابط مختصر",
+    "description": "عنوان النافذة المنبثقة"
+  },
+  "btnShortenCopy": {
+    "message": "اختصر وانسخ",
+    "description": "نص الزر"
+  },
+  "toastUrlCopied": {
+    "message": "تم نسخ الرابط إلى الحافظة.",
+    "description": "رسالة الإشعار عند النسخ"
+  },
+  "errorInvalidUrl": {
+    "message": "يتم دعم عناوين URL التي تبدأ بـ http:// أو https:// فقط.",
+    "description": "رسالة الخطأ لعناوين URL غير الصالحة"
+  }
+}

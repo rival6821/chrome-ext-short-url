@@ -1,0 +1,26 @@
+{
+  "extName": {
+    "message": "创建短链接",
+    "description": "扩展名称"
+  },
+  "extDescription": {
+    "message": "为当前页面创建短链接。",
+    "description": "扩展描述"
+  },
+  "popupTitle": {
+    "message": "创建短链接",
+    "description": "弹出窗口标题"
+  },
+  "btnShortenCopy": {
+    "message": "缩短并复制",
+    "description": "按钮文本"
+  },
+  "toastUrlCopied": {
+    "message": "URL 已复制到剪贴板。",
+    "description": "复制后的提示消息"
+  },
+  "errorInvalidUrl": {
+    "message": "仅支持以 http:// 或 https:// 开头的 URL。",
+    "description": "无效 URL 的错误消息"
+  }
+}

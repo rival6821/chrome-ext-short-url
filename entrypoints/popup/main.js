@@ -1,5 +1,16 @@
 const homeUrl = "https://l.muz.kr";
 const urlElement = document.getElementById('url');
+const rtlLanguagePrefixes = ['ar', 'fa', 'he', 'ur'];
+
+const applyDocumentLocale = () => {
+    const uiLanguage = chrome.i18n.getUILanguage();
+
+    document.documentElement.lang = uiLanguage;
+    document.documentElement.dir = rtlLanguagePrefixes.some((prefix) => uiLanguage.startsWith(prefix))
+        ? 'rtl'
+        : 'ltr';
+    document.title = chrome.i18n.getMessage('popupTitle') || document.title;
+};
 
 // Localization function
 const localizeHtml = () => {
@@ -8,12 +19,13 @@ const localizeHtml = () => {
         const key = element.getAttribute('data-i18n');
         const message = chrome.i18n.getMessage(key);
         if (message) {
-            element.innerText = message;
+            element.textContent = message;
         }
     });
 };
 
 // Run localization
+applyDocumentLocale();
 localizeHtml();
 
 let isMakeUrl = false;
